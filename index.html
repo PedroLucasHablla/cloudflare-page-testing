@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Animation</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Fullscreen Gradient Background */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff0099, #493240, #4b6cb7, #182848);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Text Styling */
+        .hello-world {
+            font-size: 5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: textBounce 2s ease infinite, textColorChange 3s infinite alternate;
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Text Bounce Animation */
+        @keyframes textBounce {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-15px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Text Color Change Animation */
+        @keyframes textColorChange {
+            0% {
+                color: #ff0099;
+            }
+            25% {
+                color: #493240;
+            }
+            50% {
+                color: #4b6cb7;
+            }
+            75% {
+                color: #182848;
+            }
+            100% {
+                color: #ff0099;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hello-world">Hello World</div>
+</body>
+</html>
